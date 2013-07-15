@@ -1,4 +1,4 @@
-# Project Name #
+# Intro to Auto Layout #
 Source code for my CocoaHeads Auto Layout presentation
 
 ### Contact

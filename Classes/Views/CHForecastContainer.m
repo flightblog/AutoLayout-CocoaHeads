@@ -32,7 +32,10 @@
 @property (nonatomic, strong) CHForecastSection *forecastDaySix;
 @end
 
-@implementation CHForecastContainer
+@implementation CHForecastContainer {
+}
+
+#pragma mark - UIView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -71,10 +74,14 @@
     return self;
 }
 
+#pragma mark - Subviews
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
 }
+
+#pragma mark - Constraints
 
 - (void)updateConstraints
 {
@@ -89,7 +96,10 @@
             [self removeConstraints:self.constraints];
         }
         
-        NSDictionary *metrics = @{@"hSpacing":@10, @"vSpacing":@30, @"header":@30, @"footer":@10};
+        NSDictionary *metrics = @{@"hSpacing":@10,
+                                  @"vSpacing":@30,
+                                  @"header":@30,
+                                  @"footer":@10};
         
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|H-hSpacing-[_forecastDayOne(>=220)]"
                                                                      options:0
@@ -175,7 +185,6 @@
                                                                      metrics:portraitMetrics
                                                                        views:currentWXView]];
     }
-    
     [super updateConstraints];
 }
 

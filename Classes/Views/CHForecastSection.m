@@ -22,7 +22,10 @@
 
 #import "CHForecastSection.h"
 
-@implementation CHForecastSection
+@implementation CHForecastSection {
+}
+
+#pragma mark - UIView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -57,40 +60,48 @@
         _highTempertureOfTheDay.text = @"46°";
         _highTempertureOfTheDay.shadowOffset = CGSizeMake(1, 2);
         [self addSubview:_highTempertureOfTheDay];
-        
-        NSDictionary *currentWXView = NSDictionaryOfVariableBindings(_dayOfTheWeek, _conditionOfTheDay, _highTempertureOfTheDay);
-       
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_dayOfTheWeek]"
-                                                                     options:0
-                                                                     metrics:nil
-                                                                       views:currentWXView]];
-        
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_conditionOfTheDay]"
-                                                                     options:0
-                                                                     metrics:nil
-                                                                       views:currentWXView]];
-        
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_highTempertureOfTheDay(55)]"
-                                                                     options:0
-                                                                     metrics:nil
-                                                                       views:currentWXView]];
-        
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[_highTempertureOfTheDay]|"
-                                                                     options:0
-                                                                     metrics:nil
-                                                                       views:currentWXView]];
-        
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-3-[_dayOfTheWeek(20)]-(<=10)-[_conditionOfTheDay(20)]"
-                                                                     options:0
-                                                                     metrics:nil
-                                                                       views:currentWXView]];
     }
     return self;
 }
 
+#pragma mark - Subviews
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+}
+
+#pragma mark - Constraints
+
+- (void)updateConstraints
+{
+    NSDictionary *currentWXView = NSDictionaryOfVariableBindings(_dayOfTheWeek, _conditionOfTheDay, _highTempertureOfTheDay);
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_dayOfTheWeek]"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:currentWXView]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_conditionOfTheDay]"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:currentWXView]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_highTempertureOfTheDay(55)]"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:currentWXView]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[_highTempertureOfTheDay]|"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:currentWXView]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-3-[_dayOfTheWeek(20)]-(<=10)-[_conditionOfTheDay(20)]"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:currentWXView]];
+    [super updateConstraints];
 }
 
 @end

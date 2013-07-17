@@ -23,5 +23,4 @@
 #import <UIKit/UIKit.h>
 
 @interface CHForecastContainer : UIView
-@property (nonatomic, copy) NSString *dayOneHighTemperature;
 @end

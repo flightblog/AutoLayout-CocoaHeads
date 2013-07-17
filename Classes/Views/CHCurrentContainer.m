@@ -22,7 +22,10 @@
 
 #import "CHCurrentContainer.h"
 
-@implementation CHCurrentContainer
+@implementation CHCurrentContainer {
+}
+
+#pragma mark - UIView 
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -65,10 +68,14 @@
     return self;
 }
 
+#pragma mark - Subviews
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
 }
+
+#pragma mark - Constraints
 
 - (void)updateConstraints
 {

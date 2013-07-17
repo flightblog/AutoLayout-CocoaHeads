@@ -19,22 +19,10 @@
 //  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
 //  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 //  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#import <UIKit/UIKit.h>
 
-#import "CHAppDelegate.h"
-#import "CHWindowController.h"
-
-@interface CHAppDelegate ()
-@property (nonatomic, strong) CHWindowController *windowController;
-@end
-
-@implementation CHAppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.windowController = [CHWindowController windowController];
-    [self.windowController.window makeKeyAndVisible];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
-
+@interface CHForecastSection : UIView
+@property (nonatomic, strong) UILabel *dayOfTheWeek;
+@property (nonatomic, strong) UILabel *highTempertureOfTheDay;
+@property (nonatomic, strong) UILabel *conditionOfTheDay;
 @end

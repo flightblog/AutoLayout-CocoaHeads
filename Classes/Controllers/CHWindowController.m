@@ -20,21 +20,32 @@
 //  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 //  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "CHAppDelegate.h"
 #import "CHWindowController.h"
+#import "CHRootViewController.h"
 
-@interface CHAppDelegate ()
-@property (nonatomic, strong) CHWindowController *windowController;
+@interface CHWindowController ()
+@property (nonatomic, strong, readwrite) UIWindow *window;
+@property (nonatomic, strong) CHRootViewController *rootViewController;
 @end
 
-@implementation CHAppDelegate
+@implementation CHWindowController
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+#pragma mark - Convenience Method
+
++ (instancetype)windowController
 {
-    self.windowController = [CHWindowController windowController];
-    [self.windowController.window makeKeyAndVisible];
-    [self.window makeKeyAndVisible];
-    return YES;
+    CHWindowController *windowContoller = [self new];
+    windowContoller.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [windowContoller.window setRootViewController:windowContoller.rootViewController];
+    return windowContoller;
+}
+
+- (CHRootViewController *)rootViewController
+{
+    if (!_rootViewController) {
+        _rootViewController = [[CHRootViewController alloc] init];
+    }
+    return _rootViewController;
 }
 
 @end

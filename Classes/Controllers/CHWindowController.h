@@ -20,21 +20,11 @@
 //  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 //  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "CHAppDelegate.h"
-#import "CHWindowController.h"
+#import <Foundation/Foundation.h>
 
-@interface CHAppDelegate ()
-@property (nonatomic, strong) CHWindowController *windowController;
-@end
+@interface CHWindowController : NSObject
+@property (nonatomic, strong, readonly) UIWindow *window;
 
-@implementation CHAppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.windowController = [CHWindowController windowController];
-    [self.windowController.window makeKeyAndVisible];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
++ (instancetype)windowController;
 
 @end

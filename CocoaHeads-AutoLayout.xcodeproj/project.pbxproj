@@ -16,6 +16,11 @@
 		F01367F217941C0100CBC16B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01367F117941C0100CBC16B /* CoreGraphics.framework */; };
 		F01367F817941C0100CBC16B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01367F617941C0100CBC16B /* InfoPlist.strings */; };
 		F01367FA17941C0100CBC16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01367F917941C0100CBC16B /* main.m */; };
+		F06230B31794363E002CA778 /* CHWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06230B2179435B3002CA778 /* CHWindowController.m */; };
+		F06230B41794363E002CA778 /* CHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06230B0179435B3002CA778 /* CHRootViewController.m */; };
+		F06230B517943910002CA778 /* CHCurrentContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F06230A8179435A3002CA778 /* CHCurrentContainer.m */; };
+		F06230B617943910002CA778 /* CHForecastContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F06230AA179435A3002CA778 /* CHForecastContainer.m */; };
+		F06230B717943910002CA778 /* CHForecastSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F06230AC179435A3002CA778 /* CHForecastSection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,16 @@
 		F01367F717941C0100CBC16B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F01367F917941C0100CBC16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F01367FB17941C0100CBC16B /* CocoaHeads-AutoLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaHeads-AutoLayout-Prefix.pch"; sourceTree = "<group>"; };
+		F06230A7179435A3002CA778 /* CHCurrentContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCurrentContainer.h; sourceTree = "<group>"; };
+		F06230A8179435A3002CA778 /* CHCurrentContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHCurrentContainer.m; sourceTree = "<group>"; };
+		F06230A9179435A3002CA778 /* CHForecastContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHForecastContainer.h; sourceTree = "<group>"; };
+		F06230AA179435A3002CA778 /* CHForecastContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHForecastContainer.m; sourceTree = "<group>"; };
+		F06230AB179435A3002CA778 /* CHForecastSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHForecastSection.h; sourceTree = "<group>"; };
+		F06230AC179435A3002CA778 /* CHForecastSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHForecastSection.m; sourceTree = "<group>"; };
+		F06230AF179435B3002CA778 /* CHRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHRootViewController.h; sourceTree = "<group>"; };
+		F06230B0179435B3002CA778 /* CHRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHRootViewController.m; sourceTree = "<group>"; };
+		F06230B1179435B3002CA778 /* CHWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHWindowController.h; sourceTree = "<group>"; };
+		F06230B2179435B3002CA778 /* CHWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +68,6 @@
 			children = (
 				F00385D3179426B800177866 /* Application */,
 				F00385D6179426B800177866 /* Controllers */,
-				F00385D7179426B800177866 /* Models */,
 				F00385DA179426B800177866 /* Views */,
 			);
 			path = Classes;
@@ -71,36 +85,23 @@
 		F00385D6179426B800177866 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F06230B1179435B3002CA778 /* CHWindowController.h */,
+				F06230B2179435B3002CA778 /* CHWindowController.m */,
+				F06230AF179435B3002CA778 /* CHRootViewController.h */,
+				F06230B0179435B3002CA778 /* CHRootViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F00385D7179426B800177866 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F00385D8179426B800177866 /* DataModel */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F00385D8179426B800177866 /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				F00385D9179426B800177866 /* Machine */,
-			);
-			path = DataModel;
-			sourceTree = "<group>";
-		};
-		F00385D9179426B800177866 /* Machine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Machine;
 			sourceTree = "<group>";
 		};
 		F00385DA179426B800177866 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F06230A7179435A3002CA778 /* CHCurrentContainer.h */,
+				F06230A8179435A3002CA778 /* CHCurrentContainer.m */,
+				F06230A9179435A3002CA778 /* CHForecastContainer.h */,
+				F06230AA179435A3002CA778 /* CHForecastContainer.m */,
+				F06230AB179435A3002CA778 /* CHForecastSection.h */,
+				F06230AC179435A3002CA778 /* CHForecastSection.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06230B517943910002CA778 /* CHCurrentContainer.m in Sources */,
+				F06230B617943910002CA778 /* CHForecastContainer.m in Sources */,
+				F06230B717943910002CA778 /* CHForecastSection.m in Sources */,
+				F06230B31794363E002CA778 /* CHWindowController.m in Sources */,
+				F06230B41794363E002CA778 /* CHRootViewController.m in Sources */,
 				F01367FA17941C0100CBC16B /* main.m in Sources */,
 				F00385E61794275500177866 /* CHAppDelegate.m in Sources */,
 			);

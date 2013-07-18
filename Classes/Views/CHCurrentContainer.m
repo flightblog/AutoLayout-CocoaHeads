@@ -27,7 +27,7 @@
 
 #pragma mark - UIView 
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -64,6 +64,8 @@
         _location.text = @"Nantucket";
         [_location sizeToFit];
         [self addSubview:_location];
+        
+        [self prepareConstraints];
     }
     return self;
 }
@@ -72,13 +74,24 @@
 
 - (void)layoutSubviews
 {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     [super layoutSubviews];
 }
 
-#pragma mark - Constraints
-
 - (void)updateConstraints
 {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [super updateConstraints];
+}
+
+
+#pragma mark - Constraints
+
+- (void)prepareConstraints
+{
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
     ////////////////////////////////////////////////////////////////////////////////////////
     //
     //  constraintWithItem

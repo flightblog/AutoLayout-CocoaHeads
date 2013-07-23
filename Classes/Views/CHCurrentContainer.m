@@ -39,7 +39,6 @@
         _temperature.shadowColor = [UIColor colorWithWhite:0.45 alpha:0.2];
         _temperature.shadowOffset = CGSizeMake(1, 2);
         _temperature.text = @"82˚";
-        [_temperature sizeToFit];
         [self addSubview:_temperature];
 
         _skyConditions = [[UILabel alloc] init];
@@ -50,7 +49,6 @@
         _skyConditions.shadowColor = [UIColor colorWithWhite:0.45 alpha:0.2];
         _skyConditions.shadowOffset = CGSizeMake(1, 2);
         _skyConditions.text = @"Wonderfully Clear";
-        [_skyConditions sizeToFit];
         [self addSubview:_skyConditions];
 
         _location = [[UILabel alloc] init];
@@ -62,7 +60,6 @@
         _location.textAlignment = NSTextAlignmentRight;
         _location.shadowOffset = CGSizeMake(1, 2);
         _location.text = @"Nantucket";
-        [_location sizeToFit];
         [self addSubview:_location];
         
         [self prepareConstraints];
